@@ -19,6 +19,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Work Day Scheduler</title>
   </head>
 
@@ -28,12 +30,18 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+    
     <div class="container">
       <!-- Timeblocks go here -->
     </div>
-    <script src="path/to/dayjs/dayjs.min.js"></script>
-    <script src="style.js"></script>
+
+    <!-- day.js links -->
+    <!-- <script src="path/to/dayjs/dayjs.min.js"></script> -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+    <!-- <script src="style.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="style.js"></script>
   </body>
 </html>

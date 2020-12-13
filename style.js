@@ -1,25 +1,52 @@
-// Day.js
-// $.ajax({
-//     type: "method",
-//     url: "url",
-//     data: "data",
-//     dataType: "dataType",
-//     success: function (response) {
-        
-//     }
-// });
 
 
-var dayjs = require('dayjs')
-import dayjs from 'dayjs' // ES 2015
-require('dayjs/locale')
-dayjs(("12-25-2001", ["YYYY", "YYYY-MM-DD", "hh-mm"], true)).format()
+// $(selector).html(htmlString);
+var day = dayjs().format("dddd,")
+var date = dayjs().format("MM-DD-YYYY,"); 
+var time = dayjs().format("HH:mm");
 
 // dayjs('')
 
 // require('dayjs/locale')
 
 
-$(dayjs).append("#currentDay");
+// $("#currentDay").innerhtml("yo");
 
-console.log (dayjs)
+$("#currentDay").text(day + " " + date + " " +time);
+
+
+var input = ();
+console.log(input)
+
+
+$(".container").append(input);
+
+
+
+var inputTimes = [
+    {time: 08, input: " "}, 
+    {time: 09, input: " "},
+    {time: 10, input: " "},
+    {time: 11, input: " "},
+    {time: 12, input: " "},
+    {time: 13, input: " "},
+    {time: 14, input: " "},
+    {time: 15, input: " "},
+    {time: 16, input: " "},
+    {time: 17, input: " "},
+    {time: 18, input: "test"},
+
+]
+
+
+
+// console.log (dayjs)
+
+
+//create variable to create input boxes for time
+//create header then append
+//create loop for variable for input boxes buttons for savings
+//append to header
+//create local storage
+
+
