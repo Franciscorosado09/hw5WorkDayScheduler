@@ -15,11 +15,11 @@ var time = dayjs().format("HH:mm");
 $("#currentDay").text(day + " " + date + " " +time);
 
 
-var input = ();
+var input = " ";
 console.log(input)
 
 
-$(".container").append(input);
+// $(".container").append(input);
 
 
 
@@ -36,7 +36,7 @@ var inputTimes = [
     {time: 17, input: " "},
     {time: 18, input: "test"},
 
-]
+]; 
 
 
 
@@ -45,7 +45,23 @@ var inputTimes = [
 
 //create variable to create input boxes for time
 //create header then append
+// $(".container").html("<h4>Please select time below, fill in activity, and then save.</h4>");
+
 //create loop for variable for input boxes buttons for savings
+function createInputBoxes (){
+
+    for (var i = 0; i < inputTimes.length; i++){
+        console.log(inputTimes[i].time, inputTimes[i].input)
+
+
+
+    }
+
+
+}
+
+createInputBoxes();
+
 //append to header
 //create local storage
 
