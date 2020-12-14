@@ -52,7 +52,7 @@ function createInputBoxes (){
     for (var i = 0; i < inputTimes.length; i++){
         console.log(inputTimes[i].time, inputTimes[i].input);
 
-        // var inputText = console.log(inputTimes[i].input)
+        var inputText = console.log(inputTimes[i].input)
 
 
         var inputGroup = $('<div class="input-group mb-3">');
@@ -60,18 +60,20 @@ function createInputBoxes (){
         var prependSpan = $('<span class="input-group-text">' + inputTimes[i].time + ':00' + '</span>');
         inputGroupPrepend.append(prependSpan);
         
-        var inputBox = $('<input type="text" class="form-control" value="" >' + inputTimes[i].input + '</input>')
+        var inputBox = $('<input type="text" id= "userInput" value = " ">')
         // var inputBox = $('<input type="text" class="form-control" value= " ">' + '</input>')
 
-        // $(inputBox).text(console.log (inputTimes[i].input))
+        // $(userInput).val(inputText);
 
 
         var inputGroupAppend = $('<div class="input-group-append">');
         var floppy = $('<span data-time="" class="input-group-text"><button><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </button></span>');
         
         inputGroupAppend.append(floppy);
+
+
         inputGroup.append(inputGroupPrepend).append(inputBox).append(inputGroupAppend);
-         $("#schedule").append(inputGroup);
+         $("#schedule").append(inputGroup,);
 
 
 
@@ -82,7 +84,23 @@ function createInputBoxes (){
 
 createInputBoxes();
 
-//append to header
+
+// floppy.addEventListener("click", function {
+//     var savedUserData = " ";
+    
+//     $(savedUserData).text(inputBox.value.trim());
+
+//     if (savedUserData === "") {
+//       return;
+//     }
+
+
+
+
+
+
+// }    
+
 //create local storage
 
 //if else statement for time frames
