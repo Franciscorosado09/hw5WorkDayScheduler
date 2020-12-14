@@ -60,13 +60,13 @@ function createInputBoxes (){
         var prependSpan = $('<span class="input-group-text">' + inputTimes[i].time + ':00' + '</span>');
         inputGroupPrepend.append(prependSpan);
         
-        // var inputBox = $('<input type="text" class="form-control" value="" >' + inputTimes[i].input + '</input>')
-        var inputBox = $('<input type="text" class="form-control" value= " ">' + '</input>')
+        var inputBox = $('<input type="text" class="form-control" value="" >' + inputTimes[i].input + '</input>')
+        // var inputBox = $('<input type="text" class="form-control" value= " ">' + '</input>')
 
         // $(inputBox).text(console.log (inputTimes[i].input))
 
 
-        // var inputGroupAppend = $('<div class="input-group-append">');
+        var inputGroupAppend = $('<div class="input-group-append">');
         var floppy = $('<span data-time="" class="input-group-text"><button><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </button></span>');
         
         inputGroupAppend.append(floppy);
