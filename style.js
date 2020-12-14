@@ -15,8 +15,7 @@ var time = dayjs().format("HH:mm");
 $("#currentDay").text(day + " " + date + " " +time);
 
 
-var input = " ";
-console.log(input)
+
 
 
 // $(".container").append(input);
@@ -51,7 +50,28 @@ var inputTimes = [
 function createInputBoxes (){
 
     for (var i = 0; i < inputTimes.length; i++){
-        console.log(inputTimes[i].time, inputTimes[i].input)
+        console.log(inputTimes[i].time, inputTimes[i].input);
+
+        // var inputText = console.log(inputTimes[i].input)
+
+
+        var inputGroup = $('<div class="input-group mb-3">');
+        var inputGroupPrepend = $('<div class="input-group-prepend">');
+        var prependSpan = $('<span class="input-group-text">' + inputTimes[i].time + ':00' + '</span>');
+        inputGroupPrepend.append(prependSpan);
+        
+        // var inputBox = $('<input type="text" class="form-control" value="" >' + inputTimes[i].input + '</input>')
+        var inputBox = $('<input type="text" class="form-control" value= " ">' + '</input>')
+
+        // $(inputBox).text(console.log (inputTimes[i].input))
+
+
+        // var inputGroupAppend = $('<div class="input-group-append">');
+        var floppy = $('<span data-time="" class="input-group-text"><button><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </button></span>');
+        
+        inputGroupAppend.append(floppy);
+        inputGroup.append(inputGroupPrepend).append(inputBox).append(inputGroupAppend);
+         $("#schedule").append(inputGroup);
 
 
 
@@ -64,5 +84,8 @@ createInputBoxes();
 
 //append to header
 //create local storage
+
+//if else statement for time frames
+
 
 
