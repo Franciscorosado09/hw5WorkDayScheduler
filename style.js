@@ -86,30 +86,38 @@ createInputBoxes();
 
 $("button").click(function (e) { 
     e.preventDefault();
-    var savedUserData = inputTimes[i].input;
-
-    savedUserData = ();
+    
+    // var savedUserData = JSON.parse(localStorage.getItem("inputTimes[i].input"));
+    
     
     // $(savedUserData).text(inputTimes[i].input);
 
 
-
+ savedInputInfo();
 
     
 });
 
 
+
+
 //create local storage
+
+
 function savedInputInfo (){
-    localStorage.setItem(, "value")
 
-
-
+    var savedUserData = JSON.parse(localStorage.getItem("inputTimes[i].input"));
+    
+    localStorage.setItem("inputTimes[i].input", JSON.stringify(savedUserData))
+    
 
 
 
 
 }
+
+
+
 //if else statement for time frames
 
 
