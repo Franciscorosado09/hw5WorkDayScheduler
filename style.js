@@ -39,12 +39,12 @@ var inputTimes = [
 
 
 
-// console.log (dayjs)
 
 
-//create variable to create input boxes for time
+
+
 //create header then append
-// $(".container").html("<h4>Please select time below, fill in activity, and then save.</h4>");
+
 
 //create loop for variable for input boxes buttons for savings
 function createInputBoxes (){
@@ -60,14 +60,14 @@ function createInputBoxes (){
         var prependSpan = $('<span class="input-group-text">' + inputTimes[i].time + ':00' + '</span>');
         inputGroupPrepend.append(prependSpan);
         
-        var inputBox = $('<input type="text" id= "userInput" value = " ">')
+        var inputBox = $('<input type="text" id= "userInput" value = "' + inputTimes[i].input + '">')
         // var inputBox = $('<input type="text" class="form-control" value= " ">' + '</input>')
 
         // $(userInput).val(inputText);
 
 
         var inputGroupAppend = $('<div class="input-group-append">');
-        var floppy = $('<span data-time="" class="input-group-text"><button><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </button></span>');
+        var floppy = $('<span data-time="" class=""><button><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </button></span>');
         
         inputGroupAppend.append(floppy);
 
@@ -84,25 +84,32 @@ function createInputBoxes (){
 
 createInputBoxes();
 
+$("button").click(function (e) { 
+    e.preventDefault();
+    var savedUserData = inputTimes[i].input;
 
-// floppy.addEventListener("click", function {
-//     var savedUserData = " ";
+    savedUserData = ();
     
-//     $(savedUserData).text(inputBox.value.trim());
-
-//     if (savedUserData === "") {
-//       return;
-//     }
+    // $(savedUserData).text(inputTimes[i].input);
 
 
 
 
+    
+});
 
-
-// }    
 
 //create local storage
+function savedInputInfo (){
+    localStorage.setItem(, "value")
 
+
+
+
+
+
+
+}
 //if else statement for time frames
 
 
