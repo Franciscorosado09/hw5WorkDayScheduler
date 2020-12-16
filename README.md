@@ -51,3 +51,6 @@ THEN the saved events persist
 
 ![1](./assets/ScreenShot1.png)
 ![2](./assets/ScreenShot2.png)
+
+![ScreenShot1](https://user-images.githubusercontent.com/71673760/102380044-79bc6980-3f95-11eb-88ac-19b31df72a41.png)
+![ScreenShot2](https://user-images.githubusercontent.com/71673760/102380079-817c0e00-3f95-11eb-856a-85eaab192b86.png)
