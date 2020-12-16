@@ -47,12 +47,7 @@ THEN the saved events persist
 
  For clarification feel free to reach out to Francisco Rosado, Franciscorosado09@.gmail.com
  
-<<<<<<< HEAD
-![](./assets/ScreenShot1.png)
-![](./assets/ScreenShot2.png)
-=======
 
 
-![](assets/ScreenShot1.png)
-![](assets/ScreenShot2.png)
->>>>>>> ce0edb944206ed4905a4f38becde545ea27ae60e
+![image1](./assets/ScreenShot1.png)
+![image2](./assets/ScreenShot2.png)
