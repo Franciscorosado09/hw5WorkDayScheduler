@@ -49,5 +49,5 @@ THEN the saved events persist
  
 
 
-![image1](./assets/ScreenShot1.png)
-![image2](./assets/ScreenShot2.png)
+![](./assets/ScreenShot1.png)
+![](./assets/ScreenShot2.png)
