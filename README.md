@@ -46,6 +46,11 @@ THEN the saved events persist
         4. Rachel Wanke - https://github.com/rwanke14
 
  For clarification feel free to reach out to Francisco Rosado, Franciscorosado09@.gmail.com
+ 
+<img width="872" alt="ScreenShot1" src="https://user-images.githubusercontent.com/71673760/102362908-e843fc00-3f82-11eb-9ac4-afc9d4b03d61.png">
+<img width="810" alt="ScreenShot2" src="https://user-images.githubusercontent.com/71673760/102362962-f2fe9100-3f82-11eb-801a-83a339c9d50a.png">
+
+
 
 ![](assets/ScreenShot1.png)
 ![](assets/ScreenShot2.png)
