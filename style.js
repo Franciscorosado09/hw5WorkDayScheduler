@@ -1,24 +1,33 @@
 
 
-// $(selector).html(htmlString);
+// variables 
 var day = dayjs().format("dddd,")
 var date = dayjs().format("MM-DD-YYYY,"); 
+
 var time = dayjs().format("HH:mm");
-
-// dayjs('')
-
-// require('dayjs/locale')
+var compareHour= dayjs().format("HH")
 
 
-// $("#currentDay").innerhtml("yo");
-
+// Setting Day, Date, Time
 $("#currentDay").text(day + " " + date + " " +time);
 
 
 
+//Live Time
+
+setInterval(function (){
+    var time = dayjs().format("HH:mm");
+    $("#currentDay").text(day + " " + date + " " +time);
 
 
-// $(".container").append(input);
+
+}, 1000);
+
+
+
+
+
+// objects of time and input boxes
 
 
 
@@ -43,30 +52,22 @@ var inputTimes = [
 
 
 
-//create header then append
 
 
 //create loop for variable for input boxes buttons for savings
-function createInputBoxes (){
+for (var i = 0; i < inputTimes.length; i++){
+    console.log(inputTimes[i].time, inputTimes[i].input);
 
-    for (var i = 0; i < inputTimes.length; i++){
-        console.log(inputTimes[i].time, inputTimes[i].input);
-
-        var inputText = console.log(inputTimes[i].input)
-
-
-        var inputGroup = $('<div class="input-group mb-3">');
-        var inputGroupPrepend = $('<div class="input-group-prepend">');
-        var prependSpan = $('<span class="input-group-text">' + inputTimes[i].time + ':00' + '</span>');
+     var inputText = console.log(inputTimes[i].input)
+     var inputGroup = $('<div>');
+        var inputGroupPrepend = $('<div>');
+        var prependSpan = $('<span class="timeblock">' + inputTimes[i].time + ':00' + '</span>');
         inputGroupPrepend.append(prependSpan);
         
-        var inputBox = $('<input type="text" id= "userInput" value = "' + inputTimes[i].input + '">')
-        // var inputBox = $('<input type="text" class="form-control" value= " ">' + '</input>')
+        var inputBox = $('<input type="text" class="textarea" id= "userInput" value = "' + inputTimes[i].input + '">')
+        
 
-        // $(userInput).val(inputText);
-
-
-        var inputGroupAppend = $('<div class="input-group-append">');
+        var inputGroupAppend = $('<div>');
         var floppy = $('<span data-time="" class=""><button><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </button></span>');
         
         inputGroupAppend.append(floppy);
@@ -76,24 +77,45 @@ function createInputBoxes (){
          $("#schedule").append(inputGroup,);
 
 
+//if else statments to color code classes
+        
+    if ( compareHour === inputTimes[i].time) {
+    $(inputBox).addClass("present");
+    } else if (compareHour < inputTimes[i].time) {
+    $(inputBox).addClass("future");
+    } else {
+    $(inputBox).addClass("past");
+    }
+
+
+
 
     }
 
 
-}
-
-createInputBoxes();
+     
+//Click event for local storage
 
 $("button").click(function (e) { 
     e.preventDefault();
     
-    // var savedUserData = JSON.parse(localStorage.getItem("inputTimes[i].input"));
+    // var inputText = JSON.parse(localStorage.getItem(inputTimes[i].input));
     
     
-    // $(savedUserData).text(inputTimes[i].input);
+    // var inputText = $(savedUserData).text(inputTimes[i].input);
+
+    var savedUserData = $(e.target).prev(inputBox).val()
+    console.log (savedUserData)
+
+    var eventSave= $(e.target).prev().prev().text()
+    console.log (eventSave)
 
 
- savedInputInfo();
+
+    localStorage.setItem(savedUserData, eventSave)
+    console.log (localStorage)
+
+//  savedInputInfo();
 
     
 });
@@ -101,24 +123,14 @@ $("button").click(function (e) {
 
 
 
-//create local storage
-
-
-function savedInputInfo (){
-
-    var savedUserData = JSON.parse(localStorage.getItem("inputTimes[i].input"));
-    
-    localStorage.setItem("inputTimes[i].input", JSON.stringify(savedUserData))
-    
 
 
 
 
-}
 
 
 
-//if else statement for time frames
+
 
 
 
