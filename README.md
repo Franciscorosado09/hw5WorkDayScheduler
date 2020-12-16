@@ -47,5 +47,5 @@ THEN the saved events persist
 
  For clarification feel free to reach out to Francisco Rosado, Franciscorosado09@.gmail.com
 
-![](/assets/screenShot1.png)
-![](/assets/screenShot2.png)
+![](./assets/ScreenShot1.png)
+![](./assets/ScreenShot2.png)
