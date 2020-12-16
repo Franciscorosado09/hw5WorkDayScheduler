@@ -60,9 +60,9 @@ for (var i = 0; i < inputTimes.length; i++){
 
      var inputText = console.log(inputTimes[i].input)
      var inputGroup = $('<div>');
-        var inputGroupPrepend = $('<div>');
+
         var prependSpan = $('<span class="timeblock">' + inputTimes[i].time + ':00' + '</span>');
-        inputGroupPrepend.append(prependSpan);
+  
         
         var inputBox = $('<input type="text" class="textarea" id= "userInput" value = "' + inputTimes[i].input + '">')
         
@@ -70,11 +70,8 @@ for (var i = 0; i < inputTimes.length; i++){
         var inputGroupAppend = $('<div>');
         var floppy = $('<span data-time="" class=""><button><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </button></span>');
         
-        inputGroupAppend.append(floppy);
-
-
-        inputGroup.append(inputGroupPrepend).append(inputBox).append(inputGroupAppend);
-         $("#schedule").append(inputGroup,);
+       
+         $("#schedule").append(inputGroup, prependSpan, inputBox, floppy);
 
 
 //if else statments to color code classes
