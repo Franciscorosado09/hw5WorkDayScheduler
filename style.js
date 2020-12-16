@@ -3,7 +3,6 @@
 // variables 
 var day = dayjs().format("dddd,")
 var date = dayjs().format("MM-DD-YYYY,"); 
-
 var time = dayjs().format("HH:mm");
 var compareHour= dayjs().format("HH")
 
@@ -18,6 +17,7 @@ $("#currentDay").text(day + " " + date + " " +time);
 setInterval(function (){
     var time = dayjs().format("HH:mm");
     $("#currentDay").text(day + " " + date + " " +time);
+    
 
 
 
@@ -79,7 +79,7 @@ for (var i = 0; i < inputTimes.length; i++){
 
 //if else statments to color code classes
         
-    if ( compareHour === inputTimes[i].time) {
+    if ( compareHour == inputTimes[i].time) {
     $(inputBox).addClass("present");
     } else if (compareHour < inputTimes[i].time) {
     $(inputBox).addClass("future");
